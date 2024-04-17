@@ -1,36 +1,36 @@
 
-clear
-runfile('C:/Users/Prathvish Shetty/.spyder-py3/untitled2.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3')
+# clear
+# runfile('C:/Users/Prathvish Shetty/.spyder-py3/untitled2.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3')
 
-## ---(Wed Sep 13 14:49:31 2023)---
-runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/spiralturtle.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
-runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/untitled0.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
-clear
-runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/untitled0.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
-clear
-runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/untitled0.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
-clear
-runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/spiralturtle1.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
-runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/untitled1.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
-runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/spiralturtle1.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
-claer
-clear
-ls
-runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/spiralturtle1.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
-clear
-runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/untitled2.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
-clear
-runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/untitled2.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
-clear
-from gmplot import gmplot
-conda list
-conda --version
-conda create --name myenv python=3.7
-conda env list
-conda list
-conda anaconda3 list
-clear
-pip install gmplot
+# ## ---(Wed Sep 13 14:49:31 2023)---
+# runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/spiralturtle.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
+# runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/untitled0.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
+# clear
+# runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/untitled0.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
+# clear
+# runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/untitled0.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
+# clear
+# runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/spiralturtle1.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
+# runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/untitled1.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
+# runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/spiralturtle1.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
+# claer
+# clear
+# ls
+# runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/spiralturtle1.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
+# clear
+# runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/untitled2.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
+# clear
+# runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/untitled2.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
+# clear
+# from gmplot import gmplot
+# conda list
+# conda --version
+# conda create --name myenv python=3.7
+# conda env list
+# conda list
+# conda anaconda3 list
+# clear
+# pip install gmplot
 from gmplot import gmplot
 runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/gmap.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
 runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/untitled3.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
@@ -46,7 +46,7 @@ for flavour in iceCreamFlavours:
 print(iceCreamFlavours[2])
 iceCreamFlavours[2]="Mango"
 iceCreamFlavours[5]="Mango"
-iceCreamFlavours[5]="Mango"?
+iceCreamFlavours[5]="Mango"
 runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/untitled1.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
 clear
 runcell(0, 'C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/untitled1.py')
@@ -56,12 +56,12 @@ float('infinity')
 runfile('C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms/luckydraw.py', wdir='C:/Users/Prathvish Shetty/.spyder-py3/PyPrograms')
 
 ## ---(Fri Sep 15 17:29:08 2023)---
-pip install pillow
+# pip install pillow
 runfile('C:/Users/Prathvish Shetty/untitled0.py', wdir='C:/Users/Prathvish Shetty')
 runfile('C:/Users/Prathvish Shetty/untitled1.py', wdir='C:/Users/Prathvish Shetty')
 clear
 runfile('C:/Users/Prathvish Shetty/untitled1.py', wdir='C:/Users/Prathvish Shetty')
-pip install opencv-python
+# pip install opencv-python
 runfile('C:/Users/Prathvish Shetty/untitled1.py', wdir='C:/Users/Prathvish Shetty')
 
 ## ---(Sat Sep 16 09:53:21 2023)---
@@ -80,9 +80,9 @@ print(sorted(x),reverse=True)
 print(sorted(x,reverse=True))
 x="python"
 print(sorted(x))
-x={'q':1,'w':2,'e':3,'r':4,'t':5,'y';6}
-x={'q':1,'w':2,'e':3,'r':4,'t':5,'y'6}
-x={'q':1,'w':2,'e':3,'r':4,'t':5,'y':6}
+# x={'q':1,'w':2,'e':3,'r':4,'t':5,'y';6}
+# x={'q':1,'w':2,'e':3,'r':4,'t':5,'y'6}
+# x={'q':1,'w':2,'e':3,'r':4,'t':5,'y':6}
 print(sorted(x))
 l=["aaaa","bbb","cc","d"]
 print(sorted(l))
@@ -123,7 +123,7 @@ a
 player1=str(input())
 player2=str(input())
 while(True):
-    if(ord(player1.lower())+1==ord(player2.lower()):
+    if(ord(player1.lower())+1==ord(player2.lower())):
         print("clap")
         break
     else:

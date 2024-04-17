@@ -44,7 +44,7 @@ def evolve(x):
     
     
 # with open("dna_data.txt") as myfile:
-with open("dna_data.txt") as myfile:
+with open("file1.txt") as myfile:
     
     x = myfile.read()
     
