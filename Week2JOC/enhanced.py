@@ -8,7 +8,7 @@ Created on Fri Sep 15 22:12:12 2023
 import cv2
 
 # Read the image
-img = cv2.imread(r"C:\Users\Prathvish Shetty\.spyder-py3\PyPrograms\image.jpg")
+img = cv2.imread(r"C:\Users\aamir\Desktop\JOC Pythen\Complete-JOC-Python\Week2JOC\image.jpg")
 
 # Preparation for CLAHE
 clahe = cv2.createCLAHE()

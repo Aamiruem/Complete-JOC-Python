@@ -2,7 +2,7 @@
 """
 Created on Thu Aug 31 12:49:08 2023
 
-@author: Prathvish Shetty
+@author: aamir
 """
 
 def binarySearch(l,x,start,end):
