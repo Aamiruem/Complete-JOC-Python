@@ -18,36 +18,86 @@
 
 import random
 
-random()                          # Random float:  0.0 <= x < 1.0
+random.random()                         # Generates a random float between 0.0 and 1.0 (exclusive)
 
+random.uniform(2.5, 10.0)               # Generates a random float between 2.5 and 10.0 (inclusive)
 
-uniform(2.5, 10.0)                # Random float:  2.5 <= x <= 10.0
+random.expovariate(1 / 5)               # Generates a random float representing an exponential distribution with a mean of 5
 
+random.randrange(10)                    # Generates a random integer from 0 to 9 (inclusive)
 
-expovariate(1 / 5)                # Interval between arrivals averaging 5 seconds
+random.randrange(0, 101, 2)             # Generates a random even integer from 0 to 100 (inclusive)
 
-randrange(10)                     # Integer from 0 to 9 inclusive
-
-
-randrange(0, 101, 2)              # Even integer from 0 to 100 inclusive
-
-
-choice(['win', 'lose', 'draw'])   # Single random element from a sequence
-'draw'
+random.choice(['win', 'lose', 'draw'])  # Chooses a single random element from the provided sequence
 
 deck = 'ace two three four'.split()
-shuffle(deck)                     # Shuffle a list
-deck
-['four', 'two', 'ace', 'three']
+random.shuffle(deck)                    # Shuffles the elements of the provided list in place
 
-sample([10, 20, 30, 40, 50], k=4) # Four samples without replacement
-[40, 10, 50, 30]
+random.sample([10, 20, 30, 40, 50], k=4) # Chooses a sample of four elements from the provided list without replacement
+
+
+
+
+
+
+# from heapq import heapify, heapreplace
+# from random import expovariate, gauss
+# from statistics import mean, quantiles
+
+# average_arrival_interval = 5.6
+# average_service_time = 15.0
+# stdev_service_time = 3.5
+# num_servers = 3
+
+# waits = []
+# arrival_time = 0.0
+# servers = [0.0] * num_servers  # time when each server becomes available
+# heapify(servers)
+# for i in range(1_000_000):
+#     arrival_time += expovariate(1.0 / average_arrival_interval)
+#     next_server_available = servers[0]
+#     wait = max(0.0, next_server_available - arrival_time)
+#     waits.append(wait)
+#     service_duration = max(0.0, gauss(average_service_time, stdev_service_time))
+#     service_completed = arrival_time + wait + service_duration
+#     heapreplace(servers, service_completed)
+
+# print(f'Mean wait: {mean(waits):.1f}   Max wait: {max(waits):.1f}')
+# print('Quartiles:', [round(q, 1) for q in quantiles(waits)])
+
+
+# # Six roulette wheel spins (weighted sampling with replacement)
+# choices(['red', 'black', 'green'], [18, 18, 2], k=6)
+# ['red', 'green', 'black', 'black', 'red', 'black']
+
+# # Deal 20 cards without replacement from a deck
+# # of 52 playing cards, and determine the proportion of cards
+# # with a ten-value:  ten, jack, queen, or king.
+# deal = sample(['tens', 'low cards'], counts=[16, 36], k=20)
+# deal.count('tens') / 20
+# 0.15
+
+# # Estimate the probability of getting 5 or more heads from 7 spins
+# # of a biased coin that settles on heads 60% of the time.
+# sum(binomialvariate(n=7, p=0.6) >= 5 for i in range(10_000)) / 10_000
+# 0.4169
+
+
+
+
+# # Probability of the median of 5 samples being in middle two quartiles
+# def trial():
+#     return 2_500 <= sorted(choices(range(10_000), k=5))[2] < 7_500
+
+# sum(trial() for i in range(10_000)) / 10_000
+
+
 
 
 
 
 from heapq import heapify, heapreplace
-from random import expovariate, gauss
+from random import expovariate, gauss, choices, sample, binomialvariate
 from statistics import mean, quantiles
 
 average_arrival_interval = 5.6
@@ -71,31 +121,23 @@ for i in range(1_000_000):
 print(f'Mean wait: {mean(waits):.1f}   Max wait: {max(waits):.1f}')
 print('Quartiles:', [round(q, 1) for q in quantiles(waits)])
 
+# Example of weighted sampling with replacement
+print(choices(['red', 'black', 'green'], [18, 18, 2], k=6))
 
-# Six roulette wheel spins (weighted sampling with replacement)
-choices(['red', 'black', 'green'], [18, 18, 2], k=6)
-['red', 'green', 'black', 'black', 'red', 'black']
-
-# Deal 20 cards without replacement from a deck
-# of 52 playing cards, and determine the proportion of cards
-# with a ten-value:  ten, jack, queen, or king.
+# Example of sampling without replacement
 deal = sample(['tens', 'low cards'], counts=[16, 36], k=20)
-deal.count('tens') / 20
-0.15
+print(deal.count('tens') / 20)
 
 # Estimate the probability of getting 5 or more heads from 7 spins
 # of a biased coin that settles on heads 60% of the time.
-sum(binomialvariate(n=7, p=0.6) >= 5 for i in range(10_000)) / 10_000
-0.4169
-
-
-
+print(sum(binomialvariate(n=7, p=0.6) >= 5 for i in range(10_000)) / 10_000)
 
 # Probability of the median of 5 samples being in middle two quartiles
 def trial():
     return 2_500 <= sorted(choices(range(10_000), k=5))[2] < 7_500
 
-sum(trial() for i in range(10_000)) / 10_000
+print(sum(trial() for i in range(10_000)) / 10_000)
+
 
 
 

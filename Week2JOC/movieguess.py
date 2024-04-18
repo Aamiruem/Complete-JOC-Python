@@ -2,131 +2,152 @@
 """
 Created on Fri Aug 25 10:41:52 2023
 
-@author: Prathvish Shetty
+@author: Aamir Hussain
 """
 
 import random
 
-movies=["sholay","anand","drishyam","nayakan","lagaan","golmaal","vikram vedha","black friday","pk","koi mil gaya","dangal",
-        "bajrangi bhaijaan","chakde india","gully boy","slumdog millionaire"]
+movies = [
+    "sholay",
+    "anand",
+    "drishyam",
+    "nayakan",
+    "lagaan",
+    "golmaal",
+    "vikram vedha",
+    "black friday",
+    "pk",
+    "koi mil gaya",
+    "dangal",
+    "bajrangi bhaijaan",
+    "chakde india",
+    "gully boy",
+    "slumdog millionaire",
+]
+
 
 def createqn(movie):
-    n=len(movie)
-    letters=list(movie)
-    temp=[]
+    n = len(movie)
+    letters = list(movie)
+    temp = []
     for l in movie:
-        if l==' ':
-            temp.append(' ')
+        if l == " ":
+            temp.append(" ")
         else:
-            temp.append('*')
-    qn=''.join(str(x) for x in temp)
+            temp.append("*")
+    qn = "".join(str(x) for x in temp)
     return qn
 
-def ispresent(letter,pickedMovie):
-    c=pickedMovie.count(letter)
-    if c==0:
+
+def is_present(letter, pickedMovie):
+    c = pickedMovie.count(letter)
+    if c == 0:
         return False
     else:
         return True
 
-def unlock(qn,movie,letter):
-    n=len(movie)
-    ref=list(movie)
-    qnlist=list(qn)
-    temp=[]
+
+def unlock(qn, movie, letter):
+    n = len(movie)
+    ref = list(movie)
+    qnlist = list(qn)
+    temp = []
     for i in range(n):
-        if ref[i]==' ' or ref[i]==letter:
+        if ref[i] == " " or ref[i] == letter:
             temp.append(ref[i])
         else:
-            if qnlist[i]=='*':
-                temp.append('*')
+            if qnlist[i] == "*":
+                temp.append("*")
             else:
                 temp.append(ref[i])
-    qnnew=''.join(str(x) for x in temp)
+    qnnew = "".join(str(x) for x in temp)
     return qnnew
-        
+
 
 def play():
-    pl1=input("Player1,Enter your name:")
-    pl2=input("Player2,Enter your name:")
-    point1=0
-    point2=0
-    turn=0
-    
-    willing=True
+    pl1 = input("Player1,Enter your name:")
+    pl2 = input("Player2,Enter your name:")
+    point1 = 0
+    point2 = 0
+    turn = 0
+
+    willing = True
     while willing:
-        if turn%2==0:
-            print(pl1,"your turn")
-            pickedMovie=random.choice(movies)
-            qn=createqn(pickedMovie)
+        if turn % 2 == 0:
+            print(pl1, "your turn")
+            pickedMovie = random.choice(movies)
+            qn = createqn(pickedMovie)
             print(qn)
-            
-            modifiedqn=qn
-            notsaid=True
+
+            modifiedqn = qn
+            notsaid = True
             while notsaid:
-                letter=input("Enter letter:")
-                if(ispresent(letter,pickedMovie)):
-                    #unlock
-                    modifiedqn=unlock(modifiedqn,pickedMovie,letter)
+                letter = input("Enter letter:")
+                if is_present(letter, pickedMovie):
+                    # unlock
+                    modifiedqn = unlock(modifiedqn, pickedMovie, letter)
                     print(modifiedqn)
-                    decision=input("Press '1' to guess the movie and '2' to unlock another character: ")
-                    if decision=='1':
-                        ans=input("Your answer: ")
-                        if ans==pickedMovie:
-                            point1+=1
+                    decision = input(
+                        "Press '1' to guess the movie and '2' to unlock another character: "
+                    )
+                    if decision == "1":
+                        ans = input("Your answer: ")
+                        if ans == pickedMovie:
+                            point1 += 1
                             print("Correct")
-                            notsaid=False
-                            print(pl1,"your score: ",point1)
+                            notsaid = False
+                            print(pl1, "your score: ", point1)
                         else:
                             print("Wrong answer,Try again")
                 else:
                     print("Letter not found")
-            c=input("Press '1' to continue and '0' to quit: ")  
-            if c=='0':
-                print(pl1,"your score: ",point1)
-                print(pl2,"your score: ",point2)
+            c = input("Press '1' to continue and '0' to quit: ")
+            if c == "0":
+                print(pl1, "your score: ", point1)
+                print(pl2, "your score: ", point2)
                 input("Thanks for playing")
-                willing=False
+                willing = False
         else:
-            print(pl2,"your turn")
-            pickedMovie=random.choice(movies)
-            qn=createqn(pickedMovie)
+            print(pl2, "your turn")
+            pickedMovie = random.choice(movies)
+            qn = createqn(pickedMovie)
             print(qn)
-            
-            modifiedqn=qn
-            notsaid=True
+
+            modifiedqn = qn
+            notsaid = True
             while notsaid:
-                letter=input("Enter letter:")
-                if(ispresent(letter,pickedMovie)):
-                    #unlock
-                    modifiedqn=unlock(modifiedqn,pickedMovie,letter)
+                letter = input("Enter letter:")
+                if is_present(letter, pickedMovie):
+                    # unlock
+                    modifiedqn = unlock(modifiedqn, pickedMovie, letter)
                     print(modifiedqn)
-                    decision=input("Press '1' to guess the movie and '2' to unlock another character: ")
-                    if decision=='1':
-                        ans=input("Your answer: ")
-                        if ans==pickedMovie:
-                            point2+=1
+                    decision = input(
+                        "Press '1' to guess the movie and '2' to unlock another character: "
+                    )
+                    if decision == "1":
+                        ans = input("Your answer: ")
+                        if ans == pickedMovie:
+                            point2 += 1
                             print("Correct")
-                            notsaid=False
-                            print(pl2,"your score: ",point2)
+                            notsaid = False
+                            print(pl2, "your score: ", point2)
                         else:
                             print("Wrong answer,Try again")
                 else:
                     print("Letter not found")
-            c=input("Press '1' to continue and '0' to quit")  
-            if c=='0':
-                print(pl1,"your score: ",point1)
-                print(pl2,"your score: ",point2)
+            c = input("Press '1' to continue and '0' to quit")
+            if c == "0":
+                print(pl1, "your score: ", point1)
+                print(pl2, "your score: ", point2)
                 input("Thanks for playing")
-                willing=False
-        turn+=1
-    
-  
+                willing = False
+        turn += 1
+
+
 play()
 
 
-
-'''
+"""
 import random
 
 movies = [
@@ -188,4 +209,4 @@ def play():
         turn += 1
 
 play()
-'''
+"""

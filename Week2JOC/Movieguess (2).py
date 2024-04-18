@@ -1,3 +1,5 @@
+import random
+
 movies=[
     "Sholay",
     "Mughal-e-Azam",
@@ -27,8 +29,7 @@ def play():
             #player1
             print(p1name,",your Turn")
             pickedMovie=random.choice(movies)
-            qn=createquestion(picked)
+            qn=createquestion(picked) # type: ignore
             print(qn)
             
-    
 play()
