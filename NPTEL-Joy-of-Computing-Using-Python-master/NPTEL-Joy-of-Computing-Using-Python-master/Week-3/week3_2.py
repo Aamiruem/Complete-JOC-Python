@@ -22,6 +22,7 @@
     
 #myfile.close()
 
+
 import random
 
 def evolve(x):
@@ -29,7 +30,7 @@ def evolve(x):
     ind = random.randint(0, len(x)-1)
     
     #if the value of p = 1 then only change the dna from 0 to 1
-    p = random.randint(1, 100)
+    p = random.randint(1, 1000)
     
     if p == 1:
         
@@ -50,7 +51,7 @@ with open("file1.txt") as myfile:
     
     x = list(x)
     
-    for i in range(0, len(x)):
+for i in range(0, len(x)):
         
-        evolve(x)
+    evolve(x)
 print(x)
