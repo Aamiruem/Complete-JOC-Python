@@ -17,12 +17,11 @@ print("Hi, how are you")
 c = input("Please entre your choice")
 d = int(c)
 if(d == 1):
-    print("You enterd one")
+    print("You entered one")
 if(d == 2):
     print("You are entered two")
 if(d == 3):
    print("Ahhh I ...am... Tired")
 if(d == 4):
     print("so, you are doing well, i will see again")
-        
-
+          
