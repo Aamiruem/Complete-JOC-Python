@@ -1,32 +1,48 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Aug 31 12:49:08 2023
 
-@author: aamir
-"""
-
-def binarySearch(l,x,start,end):
-    #base case : 1 element present
-    if start==end:
-        if l[start]==x:
-            return start
+def bubble_sort(a): 
+    n = len(a)
+    
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if(a[j] > a[j+1]):
+                a[j], a[j + 1] = a[j + 1], a[j]
+                
+    print(a)
+    
+    
+def binary_search(a, x):
+    
+    bubble_sort(a)
+    
+    low = 0
+    high = len(a) - 1
+    index = 0
+    found = False
+    count = 0
+    
+    while(low <= high):
+        
+        count += 1
+        mid = (low + high) // 2
+        
+        if(a[mid] == x): 
+            index = mid
+            found = True
+            break
+        
+        elif(a[mid] > x):
+            high = mid - 1
+            
         else:
-            return -1
+            low = mid + 1
+            
+            
+    if(found):
+        print("Your number", x, "found at index", index,"Number of iterations =", count)
+    
     else:
-        #divide the list into 2 halves
-        mid=(start+end)//2
-        if l[mid]==x:
-            return mid
-        elif l[mid]>x:
-            #left half
-            return binarySearch(l, x, start, mid-1)
-        else:
-            #right half
-            return binarySearch(l, x, mid+1, end)
-l=[10,20,30,40,50,60,70,80,90]
-x=int(input("Enter search key: "))
-index=binarySearch(l, x, 0, len(l)-1)
-if index==-1:
-    print(x,"not found.")
-else:
-    print(x,"found at index",index+1)
+        print("Your number", x, "Not Found")
+    
+arr = [5, 1, 4, 2, 8]
+binary_search(arr, 10)
+

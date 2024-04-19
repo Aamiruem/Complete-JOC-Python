@@ -1,5 +1,5 @@
 
-#magic square:- 3X3 (nXn but n should be odd) matrix where all the rows, columns and diagonals of the matrix add up to same number
+#magic square:- 3X3 (nXn but n should be odd) matrix where all the rows, colums and diagonals of the matrix add up to same number
 #numbers are from 1, 2, ...., 9 and they cannot repeat
 
 #facts about magic square
@@ -10,8 +10,7 @@
 #2 -> pos(p-1, q+1) if row = -1 then row = n-1 if col = n then col = 0
 #if pos is not empty then col = col-2 and row = row+1
 #if row = -1 and col = n then (row, col) = (0, n-2)
-
-#3 -> pos(row, col) = (r, c)
+ 
 def magic_square(n):
     
     magicSquare = []
@@ -52,7 +51,7 @@ def magic_square(n):
         
         if(magicSquare[i][j] != 0):
             
-            i = i + 1
+            i = i+1
             j = j - 2
             continue
         

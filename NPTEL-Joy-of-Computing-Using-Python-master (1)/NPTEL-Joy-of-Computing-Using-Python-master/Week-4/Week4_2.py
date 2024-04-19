@@ -7,11 +7,11 @@ symbols = []
 
 symbols = list(string.ascii_letters)
 
-#initialize 5 elemets to zero
+#initialize 5 elements to zero
 card1 = [0]*5
 card2 = [0]*5
 
-#postion in the first card that will have same symbol as card 2
+#position in the first card that will have same symbol as card 2
 pos1 = random.randint(0, 4)
 pos2 = random.randint(0, 4)
 

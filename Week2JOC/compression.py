@@ -11,9 +11,9 @@ Created on Sat Oct 21 16:16:32 2023
 import numpy
 from PIL import Image
 
-im=Image.open(r"C:\Users\Prathvish Shetty\Downloads\grayscale.jpeg")
+im=Image.open(r"C:\Users\aamir\Desktop\JOC Pythen\Complete-JOC-Python\Week2JOC\image.jpg")
 pixelMap=im.load()
-#I=numpy.asanyarray(Image.open(r"C:\Users\Prathvish Shetty\Downloads\grayscale.jpeg")) observe image as matrix
+
 img=Image.new(im.mode,im.size)
 pixelNew=img.load()
 
