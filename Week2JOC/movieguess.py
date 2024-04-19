@@ -28,7 +28,7 @@ movies = [
 
 def createqn(movie):
     n = len(movie)
-    letters = list(movie)
+    letters = list(movie)  # noqa: F841
     temp = []
     for l in movie:
         if l == " ":

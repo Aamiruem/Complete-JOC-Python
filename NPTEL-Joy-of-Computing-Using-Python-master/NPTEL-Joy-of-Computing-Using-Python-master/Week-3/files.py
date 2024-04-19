@@ -96,9 +96,9 @@ random.sample([10, 20, 30, 40, 50], k=4) # Chooses a sample of four elements fro
 
 
 
-from heapq import heapify, heapreplace
-from random import expovariate, gauss, choices, sample, binomialvariate
-from statistics import mean, quantiles
+from heapq import heapify, heapreplace  # noqa: E402
+from random import expovariate, gauss, choices, sample, binomialvariate  # noqa: E402
+from statistics import mean, quantiles  # noqa: E402
 
 average_arrival_interval = 5.6
 average_service_time = 15.0
