@@ -19,4 +19,4 @@ pytz.all_timezones
 import calendar
 #calendar.weekday?
 calendar.weekday(2023,10,24)
-Out[16]: 1
+

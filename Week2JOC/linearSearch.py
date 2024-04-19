@@ -2,7 +2,7 @@
 """
 Created on Tue Aug 29 12:16:26 2023
 
-@author: Prathvish Shetty
+@author: Aamir Hussain
 """
 
 def linearSearch(n,x):

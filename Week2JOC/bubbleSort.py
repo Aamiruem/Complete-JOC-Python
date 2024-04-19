@@ -2,7 +2,7 @@
 """
 Created on Tue Aug 29 11:39:11 2023
 
-@author: Prathvish Shetty
+@author: Aamir Hussain
 """
 
 def bubbleSort(a):
