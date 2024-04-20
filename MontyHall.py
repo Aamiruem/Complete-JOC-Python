@@ -3,7 +3,6 @@ import random
 def monty_hall_extended(num_simulations):
     switch_wins = 0
     stick_wins = 0
-    
     for _ in range(num_simulations):
         # Assign one door to have the car and three doors to have goats
         doors = ['car', 'goat', 'goat', 'goat']
